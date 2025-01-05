@@ -40,20 +40,13 @@ For a complete list and specific versions of all packages used, refer to the `re
 - `./scripts` contains a bash script to download the IMPAC dataset and clone this github repository for seamless local execution.
 - `./src` contains all relevant scripts for dataset processing, model training and testing, and result analysis.
 
----
 
-**1:** To reproduce our code locally, download `./scripts/impac_dvae.sh`, and run using the following commands:
+** 1: ** To reproduce our code locally, download `./scripts/impac_dvae.sh`, and run using the following commands:
 
-1. Open your terminal.
-2. Navigate to the directory where `impac_dvae.sh` is located:
-3. Make the script executable (if not already):
-   ```bash
-   chmod +x impac_dvae.sh
-   ```
-4. Run the script with the specified output directory:
-   ```bash
-   ./impac_dvae.sh -o your_output_directory_name
-   ```
+```bash
+chmod +x impac_dvae.sh
+./impac_dvae.sh -o your_output_directory_name
+```
 
 Replace `your_output_directory_name` with the desired name of the output directory.
 
@@ -74,11 +67,11 @@ drive.mount('/content/drive')
 !./impac_dvae.sh -o your_output_directory_name 
 ```
 
-**2:**
+** 2: **
 - `./src/get_fmri_data.ipynb` is a jupyter notebook to download the complete dataset and compute the connectivity features using atlas and parcellations. This code is a modified version of IMPAC's [autism_starting_kit.ipynb](https://nbviewer.org/github/ramp-kits/autism/blob/master/autism_starting_kit.ipynb), which can be accessed [here](https://nbviewer.org/github/ramp-kits/autism/blob/master/autism_starting_kit.ipynb).
    - For more information, please check the documentation from IMPAC [here](https://github.com/ramp-kits/autism).
 
-**3:**
+** 3: **
 - `./src/vae.ipynb` is a jupyter notebook contains the steps to train and validate our VAE model, extract and classify the latent variables from the trained DVAE, visualize the loss function and classification results, as well as computation of bootstrap confidence intervals for different classifiers and permutation tests. In order to run `./src/vae.ipynb`, make sure to run `./src/get_fmri_data.ipynb` first to get the resting state-fMRI data. This script processes and saves the data and labels as numpy arrays in `./data`. 
 
 - `./src/visualization.ipynb` is a jupyter notebook contains the steps to process and visualize the latent representations from the trained DVAE.
