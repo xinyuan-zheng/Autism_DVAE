@@ -14,7 +14,7 @@ A Feature Reduction Pipeline for the Diagnosis of Autism based on Resting-state 
 We use the public dataset from: \
 **Imaging-psychiatry challenge: predicting autism (IMPAC)**\
 **A data challenge on Autism Spectrum Disorder detection** \
-Authors: Roberto Toro (Institut Pasteur), Nicolas Traut (Institut Pasteur), Anita Beggiato (Institut Pasteur), Katja Heuer (Institut Pasteur), Gael Varoquaux (Inria, Parietal), Alex Gramfort (Inria, Parietal), Balazs Kegl (LAL), Guillaume Lemaitre (CDS), Alexandre Boucaud (CDS), and Joris van den Bossche (CDS)
+Roberto Toro (Institut Pasteur), Nicolas Traut (Institut Pasteur), Anita Beggiato (Institut Pasteur), Katja Heuer (Institut Pasteur), Gael Varoquaux (Inria, Parietal), Alex Gramfort (Inria, Parietal), Balazs Kegl (LAL), Guillaume Lemaitre (CDS), Alexandre Boucaud (CDS), and Joris van den Bossche (CDS)
 
 - To access the complete dataset, please see the section below on how to download the data. 
 
@@ -59,10 +59,8 @@ drive.mount('/content/drive')
 
 ```python
 # Download the bash script
-!wget -O impac_dvae.sh https://github.com/xinyuan-zheng/Autism_VAE/tree/main/scripts/impac_dvae.sh
-# Make the script executable
+!wget -O impac_dvae.sh https://github.com/xinyuan-zheng/Autism_DVAE/tree/main/scripts/impac_dvae.sh
 !chmod +x impac_dvae.sh
-# Run the script with the specified output directory
 !./impac_dvae.sh -o your_output_directory_name 
 ```
 
